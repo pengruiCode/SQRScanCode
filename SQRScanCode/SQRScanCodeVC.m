@@ -45,9 +45,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationController.navigationBar.barTintColor = _navColor;
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     NSNumber *num = [SQRDataSave takeOutDataFromDataEnum:SaveDataEnum_MasterColor customKey:nil];
-    self.navigationController.navigationBar.tintColor = num ? DEF_HEXColor(num.intValue) : [UIColor lightGrayColor];
+    self.navigationController.navigationBar.barTintColor = num ? DEF_HEXColor(num.intValue) : [UIColor lightGrayColor];
     
     [self scanCode];
     
