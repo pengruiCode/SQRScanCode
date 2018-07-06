@@ -7,6 +7,8 @@
 //
 
 #import "SQRScanCodeVC.h"
+#import <SQRBaseDefineWithFunction/SQRDataSave.h>
+#import <SQRBaseDefineWithFunction/SQRBaseDefine.h>
 #import <AVFoundation/AVFoundation.h>
 
 #define ScreenW [UIScreen mainScreen].bounds.size.width
@@ -24,7 +26,7 @@
     UIImage *_linimg;
     UILabel *lab;
     int index;
-
+    
     NSString *deviceid;
     NSString *passw;
 }
@@ -44,7 +46,8 @@
     [super viewDidLoad];
     
     self.navigationController.navigationBar.barTintColor = _navColor;
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    NSNumber *num = [SQRDataSave takeOutDataFromDataEnum:SaveDataEnum_MasterColor customKey:nil];
+    self.navigationController.navigationBar.tintColor = num ? DEF_HEXColor(num.intValue) : [UIColor lightGrayColor];
     
     [self scanCode];
     

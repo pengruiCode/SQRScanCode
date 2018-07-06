@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SQRScanCode"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary  	 = '扫描条形码和二维码'
   s.homepage     = "https://github.com/pengruiCode/SQRScanCode.git"
   s.license      = { :type => "MIT", :file => "LICENSE" }
@@ -14,4 +14,9 @@ Pod::Spec.new do |s|
   s.description  = <<-DESC
 			扫描条形码和二维码并返回
                    DESC
+
+  s.subspec "SQRBaseDefineWithFunction" do |ss|
+     ss.dependency "SQRBaseDefineWithFunction"
+  end
+
  end

@@ -14,7 +14,7 @@ typedef NS_ENUM(NSUInteger, SQRScanCodeType) {
     //条形码
     SQRScanCodeTypeBarCode,
     //二维码加条形码
-    SQRScanCodeTypeQRCodeAndBarCode,
+    SQRScanCodeTypeQRCodeAndBarCode
 };
 
 //用block返回扫描结果
