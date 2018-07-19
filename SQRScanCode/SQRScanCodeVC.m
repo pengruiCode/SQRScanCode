@@ -251,7 +251,7 @@
 //根据传入图片设置扫描框
 -(void) setScanImageView {
     CGFloat new = [self conversionFloat:1.1];
-    UIImage * img = [UIImage imageNamed:@"扫描框"];
+    UIImage * img = [UIImage imageNamed:@"Group2"];
     CGFloat x = (self.view.frame.size.width- img.size.width*new)/2;
     
     CGFloat y = self.view.frame.size.height/2-img.size.height*new+100;
@@ -265,7 +265,7 @@
 //根据传入图片设置扫码线
 -(void)setScanLine {
     
-    _linimg = [UIImage imageNamed:@"扫描线"];
+    _linimg = [UIImage imageNamed:@"Oval5"];
     _QrCodeline = [[ UIImageView alloc ] initWithImage:_linimg];
     _QrCodeline.frame = CGRectMake(_QimageView.frame.origin.x , _QimageView.frame.origin.y, _QimageView.frame.size.width, _linimg.size.height * 1.1);
     
